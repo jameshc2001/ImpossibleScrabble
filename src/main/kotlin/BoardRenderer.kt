@@ -24,6 +24,7 @@ object BoardRenderer {
     private fun DIV.renderCell(x: Int, y: Int) {
         val tileType = getTileType(x, y)
         val cssClass = when (tileType) {
+            Centre -> "centreTile"
             TripleWord -> "tripleWord"
             DoubleWord -> "doubleWord"
             TripleLetter -> "tripleLetter"
@@ -31,6 +32,7 @@ object BoardRenderer {
             Normal -> ""
         }
         val tileText = when (tileType) {
+            Centre -> "⭐"
             TripleWord -> "TW"
             DoubleWord -> "DW"
             TripleLetter -> "TL"

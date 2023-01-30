@@ -28,15 +28,43 @@
 }
 
 .tripleWord {
-  background-color: red;
+  background-color: #fa6e43;
 }
 
 .tripleWord:hover {
-  background-color: blue;
+  background-color: #c2441d;
 }
 
 .doubleWord {
-  background-color: blue;
+  background-color: #f792ea;
+}
+
+.doubleWord:hover {
+  background-color: #b85eac;
+}
+
+.tripleLetter {
+  background-color: #4d79ff;
+}
+
+.tripleLetter:hover {
+  background-color: #385ac2;
+}
+
+.doubleLetter {
+  background-color: #42d0ff;
+}
+
+.doubleLetter:hover {
+  background-color: #2b9cc2;
+}
+
+.centreTile {
+  background-color: #e03131;
+}
+
+.centreTile:hover {
+  background-color: #ab2020;
 }
 
 .tileText {
