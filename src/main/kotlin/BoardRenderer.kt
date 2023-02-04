@@ -12,10 +12,12 @@ object BoardRenderer {
     private const val size = 15
 
     fun Node.renderBoard() = append {
-        div("grid board") {
-            (0 until size).toList().forEach { x ->
-                (0 until size).toList().forEach { y ->
-                    renderCell(x, y)
+        div("container") {
+            div("grid") {
+                (0 until size).toList().forEach { x ->
+                    (0 until size).toList().forEach { y ->
+                        renderCell(x, y)
+                    }
                 }
             }
         }
@@ -29,7 +31,7 @@ object BoardRenderer {
             DoubleWord -> "doubleWord"
             TripleLetter -> "tripleLetter"
             DoubleLetter -> "doubleLetter"
-            Normal -> ""
+            Normal -> "normalTile"
         }
         val tileText = when (tileType) {
             Centre -> "⭐"
@@ -39,7 +41,7 @@ object BoardRenderer {
             DoubleLetter -> "DL"
             Normal -> ""
         }
-        div("square $cssClass") {
+        div("cell $cssClass") {
             id = "tile$x-$y"
             p("tileText") { +tileText }
         }

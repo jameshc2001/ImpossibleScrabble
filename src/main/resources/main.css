@@ -1,29 +1,39 @@
-.board {
-  margin: auto;
-  height: 90vh;
-  aspect-ratio: 1/ 1;
-  border: 3px solid #1E1E1E;
-  padding: 0.1%;
-  background-color: #1E1E1E;
+body {
+ background-color: #545454
 }
 
+.container {
+  background: black;
+  display: inline-block;
+  border: 2px solid black;
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  gap: 0.25%;
+  grid-template-columns: repeat(15, 50px);
+  grid-template-rows: repeat(15, 50px);
+  grid-gap: 2px;
+}
+.cell {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: Arial;
+  font-size: 1rem;
+  font-weight: bold;
+  background: white;
 }
 
-.square {
+.normalTile {
   aspect-ratio: 1/ 1;
   display: inline;
   align-items: center;
-  padding: 0%;
+  padding: 0px;
   background-color: #ffcf94;
   color: #fff;
   text-align: center;
 }
 
-.square:hover {
+.normalTile:hover {
   background-color: #ffb75e;
 }
 
